@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans", Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,6 +90,7 @@ select:focus {
 
 /* Burger button */
 .menu-toggle {
+    font-family: "Noto Sans", Arial, sans-serif;
     display: none;
     position: fixed;
     top: 15px;
