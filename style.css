@@ -8,6 +8,22 @@ body {
     color: #333;
 }
 
+select {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+select:focus {
+    border-color: #0056b3;
+}
+
 .container {
     text-align: center;
     background: white;
@@ -16,7 +32,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.timer {
+#timer {
     font-size: 2.5rem;
     font-weight: bold;
     color: #0056b3;
