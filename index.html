@@ -7,15 +7,24 @@
             <link rel="stylesheet" href="style.css">
         </head>
         <body>
-            <div class="container">
-                <h1>Time Since We Met</h1>
-                <select id="formatSelector">
-                    <option value="default">Days, Hours, Minutes, Seconds</option>
-                    <option value="ymd">Years, Months, Days</option>
-                    <option value="seconds">Total Seconds</option>
-                </select>
-                
-                <div id="timer">Loading...</div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="sidenav" id="sidenav">
+                <h2>Menu</h2>
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Gallery</a>
+            </div>
+            <div class="main">
+                <div class="container">
+                    <h1>Time Since We Met</h1>
+                    <select id="formatSelector">
+                        <option value="default">Days, Hours, Minutes, Seconds</option>
+                        <option value="ymd">Years, Months, Days</option>
+                        <option value="seconds">Total Seconds</option>
+                    </select>
+
+                    <div id="timer">Loading...</div>
+                </div>
             </div>
             <script src="script.js"></script>
         </body>

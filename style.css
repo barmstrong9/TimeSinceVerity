@@ -38,3 +38,68 @@ select:focus {
     color: #0056b3;
     margin-top: 1rem;
 }
+
+/* Side Navigation */
+.sidenav {
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f9c22e;
+    padding-top: 20px;
+}
+
+.sidenav h2 {
+    color: black;
+    text-align: center;
+}
+
+.sidenav a {
+    display: block;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidenav a:hover {
+    background-color: #e0aa1f;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .sidenav {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidenav.active {
+        transform: translateX(0);
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+}
+
+/* Burger button */
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #f9c22e;
+    color: black;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 8px;
+}

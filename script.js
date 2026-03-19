@@ -49,3 +49,8 @@ document.getElementById("formatSelector").addEventListener('change', updateTimer
 
 updateTimer();
 setInterval(updateTimer, 1000);
+
+function toggleMenu() {
+    const sidenav = document.getElementById("sidenav");
+    sidenav.classList.toggle("active");
+}
