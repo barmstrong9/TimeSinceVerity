@@ -1,0 +1,195 @@
+:root {
+    /* Rustic Italian Color Palette */
+    --bg-parchment: #f9f5eb;
+    --text-primary: #3a2b24;
+    --accent-red: #8b2b2a;
+    --olive-green: #5b6b3e;
+    --divider-color: #d1c4a9;
+}
+
+body {
+    background-color: var(--bg-parchment);
+    color: var(--text-primary);
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Very subtle noise/texture for parchment effect */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+
+/* Header */
+.menu-header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+.restaurant-name {
+    font-family: 'Italianno', cursive;
+    font-size: 5rem;
+    color: var(--accent-red);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--olive-green);
+    letter-spacing: 2px;
+    margin-top: 0;
+}
+
+/* Navigation */
+#category-nav {
+    background-color: rgba(249, 245, 235, 0.95);
+    border-top: 1px solid var(--divider-color);
+    border-bottom: 1px solid var(--divider-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-red);
+}
+
+/* Menu Container */
+.menu-container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.menu-category {
+    margin-bottom: 4rem;
+    background: #fffdf7;
+    padding: 3rem 2rem;
+    border: 2px double var(--divider-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--olive-green);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.category-divider {
+    height: 2px;
+    background-color: var(--accent-red);
+    width: 60px;
+    margin: 1rem auto 2rem;
+}
+
+/* Menu Items */
+.menu-item {
+    margin-bottom: 2rem;
+}
+
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    /* Dotted leader between name and price */
+    border-bottom: 2px dotted var(--divider-color);
+}
+
+.item-name {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    background: #fffdf7;
+    padding-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.item-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-red);
+    background: #fffdf7;
+    padding-left: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.item-description {
+    font-style: italic;
+    color: #665b55;
+    margin: 0;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Footer */
+.menu-footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #ede7d7;
+    border-top: 1px solid var(--divider-color);
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-footer p {
+    font-size: 1.5rem;
+    color: var(--accent-red);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.footer-note {
+    font-size: 0.9rem !important;
+    color: #888 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-style: normal !important;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    .restaurant-name {
+        font-size: 3.5rem;
+    }
+    .menu-category {
+        padding: 2rem 1rem;
+    }
+}
