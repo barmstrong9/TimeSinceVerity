@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Time Since Verity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Navigation (matches your index.html) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="sidenav" id="sidenav">
+        <h2>Menu</h2>
+        <a href="index.html">Home</a>
+        <a href="our-story.html">Our Story</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="menu.html">Food Menu</a>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <h1>Our Memories</h1>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                
+                <!-- Photocard 1 -->
+                <div class="photocard" 
+                     data-images="images/seahouses_may_26/me_and_v_SH.jpg, images/seahouses_may_26/beach_wide.jpg, images/seahouses_may_26/castle_distant.jpg, images/seahouses_may_26/castle_zoom.jpg, images/seahouses_may_26/cliff_top_islands.jpg, images/seahouses_may_26/seal_zoom.jpg, images/seahouses_may_26/three_seals.jpg, images/seahouses_may_26/two_seals.jpg" 
+                     data-date="Sunday 24th May, 2026" 
+                     data-location="Seahouses" 
+                     data-description="A beautiful day up the North East coast. We went on a boat trip to the Farne Islands to see the puffins and seals. We got chish and fips, played on the 2p machines, got some ice cream and some canny sunburn.">
+                    <img src="images/seahouses_may_26/me_and_v_SH.jpg" alt="Me & V at Seahouses">
+                    <div class="photocard-info">
+                        <span class="photo-location">Seahouses, Northumberland</span>
+                        <span class="photo-date">Sunday 24th May, 2026</span>
+                    </div>
+                </div>
+
+                <!-- Photocard 2 -->
+                <div class="photocard" 
+                     data-full-image="https://via.placeholder.com/800x600" 
+                     data-date="June 2, 2024" 
+                     data-location="Tynemouth Beach" 
+                     data-description="The water was freezing but we got fish and chips afterwards to warm up. Perfect day!">
+                    <img src="https://via.placeholder.com/400x300" alt="Tynemouth">
+                    <div class="photocard-info">
+                        <span class="photo-location">Tynemouth Beach</span>
+                        <span class="photo-date">June 2, 2024</span>
+                    </div>
+                </div>
+
+                <!-- Add more photocards here following the same structure -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Overlay -->
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+        
+            <div class="carousel-container">
+                <button id="prevBtn" class="carousel-btn">&#10094;</button>
+                <div class="carousel-viewport">
+                    <div id="carouselTrack" class="carousel-track"></div>
+                </div>
+                <button id="nextBtn" class="carousel-btn">&#10095;</button>
+            </div>
+        
+            <div id="carouselDots" class="carousel-dots"></div>
+
+            <div class="modal-text">
+                <h2 id="modalLocation">Location</h2>
+                <h4 id="modalDate">Date</h4>
+                <p id="modalDescription">Description goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
